@@ -36,7 +36,7 @@ tabla.grid(row=4, column=0, columnspan=4, pady=10)
 for col in ("ID", "Nombre", "Correo", "Teléfono"):
     tabla.heading(col, text=col)
 
-# Funciones
+# Funciones DML
 def actualizar_tabla():
     for fila in tabla.get_children():
         tabla.delete(fila)
