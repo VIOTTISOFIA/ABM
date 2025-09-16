@@ -1,6 +1,7 @@
 import mysql.connector
 from mysql.connector import Error
 
+# Genera la conexion con el BD
 class Conexion:
     def __init__(self):
         try:
@@ -16,7 +17,9 @@ class Conexion:
             print(f"❌ Error al conectar: {err}")
             self.conexion = None
             self.cursor = None
-
+            
+# Cierra la conexion con la BD
+    
     def cerrar(self):
         if self.cursor:
             self.cursor.close()
