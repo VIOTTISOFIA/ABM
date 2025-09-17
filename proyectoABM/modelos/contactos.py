@@ -4,6 +4,8 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from conexion import Conexion
 
+# Crea crea la tabla CONTACTOS
+
 def crear_tabla_contactos():
     db = Conexion()
     cursor = db.cursor
@@ -21,6 +23,7 @@ def crear_tabla_contactos():
     db.cerrar()
     print("✅ Tabla 'contactos' creada correctamente.")
 
+# GEnerar nueva linea en labase de datos, con los datos.
 
 def insertar_contacto(nombre, correo, telefono):
     db = Conexion()
@@ -35,7 +38,7 @@ def insertar_contacto(nombre, correo, telefono):
     print(f"🟢 Contacto '{nombre}' insertado correctamente.")
 
     
-
+# Listar todos los contactos de la BD
 def listar_contactos():
     db = Conexion()
     cursor = db.cursor
@@ -50,10 +53,7 @@ def listar_contactos():
 
     return resultados
 
-
-
-
-
+# Eliminar los contactos
 
 def eliminar_contacto(id):
     db = Conexion()
